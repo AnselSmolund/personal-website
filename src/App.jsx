@@ -10,18 +10,20 @@ const Container = styled.div`
 `;
 
 const Header = styled.div`
-  font-size: 50px;
-  display: flex;
-  align-items: center;
+  font-size: 20px;
+  text-align: center;
 `;
 
 const HeaderImg = styled.div``;
+
 const App = () => {
   return (
     <Container>
       <Header>
         <h1>Hi, i'm Ansel</h1>
-        <img src={anselimg} width={200} />
+        <HeaderImg>
+          <img src={anselimg} width={200} />
+        </HeaderImg>
       </Header>
     </Container>
   );
