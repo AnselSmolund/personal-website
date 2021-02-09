@@ -23,8 +23,8 @@ const Header = styled.div`
   flex: 6;
 `;
 
-const Hire = styled.div`
-  flex: 6;
+const Socials = styled.div`
+  margin-top: -10px;
 `;
 
 const HeaderText = styled.p`
@@ -61,32 +61,33 @@ const Home = () => {
           <span style={{ color: "#e9b0df" }}> designer</span> -
           <span style={{ color: "#ff884b" }}> cyclist</span>
         </Tagline>
-        <HeaderImg>
-          <img src={anselimg} height={450} />
+        <Socials>
+          <a href="https://github.com/anselsmolund">
+            <GitHubIcon style={iconStyle} />
+          </a>
+          <a href="https://www.instagram.com/ansels.photo/">
+            <InstagramIcon style={iconStyle} />
+          </a>
+          <a href="https://www.youtube.com/channel/UCX4OanYXxKVVMd-KvkIntNQ">
+            <YouTubeIcon style={iconStyle} />
+          </a>
+          <a href="https://twitter.com/smolundo">
+            <TwitterIcon style={iconStyle} />
+          </a>
+          <a href="https://www.linkedin.com/in/anselsmolund/">
+            <LinkedInIcon style={iconStyle} />
+          </a>
+          <a href="https://www.strava.com/athletes/43174923">
+            <StravaIcon src={StravaImg} />
+          </a>
+        </Socials>
+        <HeaderImg style={{ marginTop: 10 }}>
+          <img src={anselimg} height={300} />
         </HeaderImg>
-        <p>
+        <p style={{ marginTop: 10 }}>
           {" "}
-          Need a website? <a href="/contact">Let me build you one!</a>
+          Need a website? <a href="/contact">Click here!</a>
         </p>
-
-        <a href="https://github.com/anselsmolund">
-          <GitHubIcon style={iconStyle} />
-        </a>
-        <a href="https://www.instagram.com/ansels.photo/">
-          <InstagramIcon style={iconStyle} />
-        </a>
-        <a href="https://www.youtube.com/channel/UCX4OanYXxKVVMd-KvkIntNQ">
-          <YouTubeIcon style={iconStyle} />
-        </a>
-        <a href="https://twitter.com/smolundo">
-          <TwitterIcon style={iconStyle} />
-        </a>
-        <a href="https://www.linkedin.com/in/anselsmolund/">
-          <LinkedInIcon style={iconStyle} />
-        </a>
-        <a href="https://www.strava.com/athletes/43174923">
-          <StravaIcon src={StravaImg} />
-        </a>
       </Header>
     </Container>
   );
