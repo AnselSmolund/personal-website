@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import anselimg from "../../assets/ansel_main.jpeg";
+import anselimg from "../../assets/ansel_main2.jpg";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import TwitterIcon from "@material-ui/icons/Twitter";
@@ -30,7 +30,7 @@ const Hire = styled.div`
 const HeaderText = styled.p`
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 60px;
+  font-size: 40px;
   margin-bottom: 0px !important;
 `;
 
@@ -61,13 +61,13 @@ const Home = () => {
           <span style={{ color: "#e9b0df" }}> designer</span> -
           <span style={{ color: "#ff884b" }}> cyclist</span>
         </Tagline>
+        <HeaderImg>
+          <img src={anselimg} height={450} />
+        </HeaderImg>
         <p>
           {" "}
-          Need a website? <a href="/contact">Lets work together!</a>
+          Need a website? <a href="/contact">Let me build you one!</a>
         </p>
-        <HeaderImg>
-          <img src={anselimg} width={200} />
-        </HeaderImg>
 
         <a href="https://github.com/anselsmolund">
           <GitHubIcon style={iconStyle} />
