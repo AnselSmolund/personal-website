@@ -1,5 +1,4 @@
 import axios from "axios";
-import { auth } from "../auth";
 const apiBase = "https://www.strava.com/";
 
 export const getAuthToken = async ({ client_id, client_secret, code }) => {
@@ -12,9 +11,9 @@ export const getAuthToken = async ({ client_id, client_secret, code }) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      client_id,
-      client_secret,
-      code,
+      client_id: process.env.client_id,
+      client_secret: process.env.client_secret,
+      code: process.env.code,
       grant_type: "authorization_code",
     }),
   };
@@ -23,11 +22,7 @@ export const getAuthToken = async ({ client_id, client_secret, code }) => {
   return data;
 };
 
-export const getRefreshToken = async (
-  client_id,
-  client_secret,
-  refresh_token
-) => {
+export const getRefreshToken = async () => {
   const url = `https://www.strava.com/oauth/token`;
 
   const options = {
@@ -37,9 +32,9 @@ export const getRefreshToken = async (
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      client_id: client_id,
-      client_secret: client_secret,
-      refresh_token: refresh_token,
+      client_id: process.env.client_id,
+      client_secret: process.env.client_secret,
+      code: process.env.refresh,
       grant_type: "refresh_token",
     }),
   };
@@ -49,11 +44,7 @@ export const getRefreshToken = async (
 };
 
 export const getActivities = async (num_rides) => {
-  const { access_token } = await getRefreshToken(
-    auth.client_id,
-    auth.client_secret,
-    auth.refresh
-  );
+  const { access_token } = await getRefreshToken();
   const url = `${apiBase}/api/v3/athlete/activities?per_page=${num_rides}&access_token=${access_token}`;
 
   let { data } = await axios.get(url);
@@ -62,11 +53,7 @@ export const getActivities = async (num_rides) => {
 };
 
 export const getStravaStats = async () => {
-  const { access_token } = await getRefreshToken(
-    auth.client_id,
-    auth.client_secret,
-    auth.refresh
-  );
+  const { access_token } = await getRefreshToken();
 
   const url = `${apiBase}api/v3/athletes/43174923/stats?access_token=${access_token}`;
 
