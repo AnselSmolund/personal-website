@@ -1,8 +1,8 @@
 import React from "react";
 import Nav from "react-bootstrap/Nav";
 import styled from "styled-components";
-import { MainTheme, red } from "../../../styles/colors";
-import { motion, AnimatePresence } from "framer-motion";
+import { red } from "../../../styles/colors";
+import { motion } from "framer-motion";
 
 const NavLink = styled(Nav.Link)`
   font-size: 24px;
