@@ -74,7 +74,7 @@ function ContactForm(props) {
           <p>
             You'll be hearing from me soon!{" "}
             <a
-              href="#"
+              href="/contact"
               onClick={() => {
                 setEmailSent(false);
               }}
