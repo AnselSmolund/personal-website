@@ -35,7 +35,7 @@ const Home = () => {
     <Container>
       <Header>
         <HeaderText>Hi, i'm Ansel</HeaderText>
-        <img src={anselimg} height={400} />
+        <img src={anselimg} height={400} alt={"its me!"} />
         <Tagline>
           <span style={{ color: "#ff577f" }}>Full stack web developer</span> -
           <span style={{ color: "#295939" }}> photographer</span> -

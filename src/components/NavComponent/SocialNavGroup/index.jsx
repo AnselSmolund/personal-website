@@ -5,7 +5,6 @@ import styled from "styled-components";
 import {
   TWITTER_LINK,
   INSTAGRAM_LINK,
-  TIKTOK_LINK,
   YOUTUBE_LINK,
   STRAVA_LINK,
   GITHUB_LINK,
@@ -19,7 +18,6 @@ import {
   FaLinkedin,
   FaStrava,
 } from "react-icons/fa";
-import { SiTiktok } from "react-icons/si";
 
 export const SocialNavs = styled(Nav)`
   margin-left: ${(props) => (props.marginleft ? props.marginleft : 0)};
